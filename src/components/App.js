@@ -8,23 +8,33 @@ function NavBar() {
   );
 }
 
-function Home() {
+function Home(props) {
   return (
     <div id="home">
-      <h1>Home</h1>
+      <h1>{props.title}</h1>
+      {props.children}
     </div>
   );
 }
 
-{/* write an <About> component here */}
+function About() {/* write an <About> component here */
+  return (
+    <div id="about">
+      <h1>About</h1>
+    </div>
+  )
+}
 
 
 function App() {
   return (
     <div>
       <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
+      <Home title="Home">
+        <div id="about">
+          <h1>About</h1>
+        </div>
+      </Home>
     </div>
   );
 }

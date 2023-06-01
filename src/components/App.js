@@ -11,8 +11,7 @@ function NavBar() {
 function Home(props) {
   return (
     <div id="home">
-      <h1>{props.title}</h1>
-      {props.children}
+      <h1>Home</h1>
     </div>
   );
 }
@@ -30,11 +29,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home title="Home">
-        <div id="about">
-          <h1>About</h1>
-        </div>
-      </Home>
+      <Home />
+      <About />
     </div>
   );
 }
